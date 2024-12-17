@@ -1,28 +1,86 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  color: #212121;
+/* 主容器 */
+.app-container {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
 }
 
-.container {
+/* 頁面上方按鈕置中 */
+.top-nav {
+  background-color: #d3dbaa;
+  color: white;
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  align-items: center; /* 垂直置中 */
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 20px 20px; /* 底部圓弧 */
+}
+
+.top-nav h2 {
+  margin: 0 20px;
+}
+
+/* 導覽按鈕樣式 */
+.nav-button {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #718c4e99;
+  margin: 0 10px; /* 按鈕之間的間距 */
+  border-radius: 50px; /* 圓弧型按鈕 */
+  transition: background 0.3s, transform 0.2s;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav-button:hover {
+  background-color: #457f47;
+  transform: scale(1.05); /* 放大效果 */
+}
+
+/* 主內容 */
+.main-content {
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 20px;
+  justify-content: center; /* 學生卡片置中 */
+  background-color: #fafafa;
 }
 
-.container .student {
-  border: solid 1px #212121;
-  border-radius: .3rem;
-  width: 15rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1% 2%;
+/* 學生卡片 */
+.student {
+  background: white;
+  border: 1px solid #477047;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s;
 }
 
+.student:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
 
-.container .student h1 {
-  font-size: 1.25rem;
+.student h1 {
+  font-size: 18px;
+  margin: 0 0 10px;
+  color: #2e2d48;
+}
+
+.student p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #3f434a;
+}
+
+/* 無資料時 */
+.no-data {
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 20px;
 }
